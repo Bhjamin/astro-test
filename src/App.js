@@ -1,15 +1,18 @@
-import './App.css';
-import AddToDo from './components/addToDo'
-import ViewToDo from './components/viewToDo'
+import "./App.css";
+import AddToDo from "./components/AddToDo";
+import ViewToDo from "./components/ViewToDo";
+import { useState } from "react";
 
-function App() {
+const App = () => {
+
+  const [addedToDo, setAddedToDo] = useState(0)
+
   return (
-    <div className="App">
-      <AddToDo/>
-      <br/>
-      <ViewToDo/>
+    <div className="container1">
+      <AddToDo addedToDo={addedToDo} setAddedToDo={setAddedToDo} />
+      <ViewToDo addedToDo={addedToDo} setAddedToDo={setAddedToDo} />
     </div>
   );
-}
+};
 
 export default App;

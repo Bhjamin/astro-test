@@ -1,0 +1,8 @@
+
+.container1 {
+    margin: 0;
+    border: 5px solid black;
+    width: calc(100% - 10px);
+    height: calc(100vh - 10px);
+    background-color: gray;
+}
